@@ -1,0 +1,72 @@
+.main_div{
+    margin: auto;
+    width: 100%;
+    position: relative;
+    font-size: 0;
+    display: inline-block;
+}
+.image_div{
+    margin: auto;
+    /*align-items: center;*/
+    width: 100%;
+    position: relative;
+}
+.image{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+h2{
+    color: black;
+    font-size: 5vw;
+    font-weight: lighter;
+}
+
+.text_div{
+    position: absolute;
+    right: 0px;
+    margin-left: auto;
+    margin-bottom: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(222,220,219,.5);
+}
+
+.inner_text_div{
+    width: 70%;
+    height: 85%;
+    margin-left: 15%;
+    margin-right: auto;
+    margin-top: 20%;
+    text-align: left;
+    font-family: Roboto, sans-serif;
+}
+
+#intro_text{
+    font-weight: lighter;
+    font-size: 1.5vw;
+}
+
+.info{
+    font-weight: lighter;
+    font-size: 1vw;
+    line-height: 2em;
+}
+
+br{
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 4vw;
+}
+
+/*Button{*/
+    /*width: 18vw;*/
+/*}*/
+
+.button_label{
+    font-size: 1.3vw;
+    font-weight: lighter;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+

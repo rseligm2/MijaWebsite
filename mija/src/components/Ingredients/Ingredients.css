@@ -1,0 +1,95 @@
+.main_ing_div{
+    margin: auto;
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+
+.main_header{
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    margin-top: 0;
+    font-family: Roboto, sans-serif;
+    /*border-bottom-style: solid;*/
+    /*border-color: rgba(222,220,219,.5);*/
+}
+
+.ing_title{
+    font-size: 3vw;
+    font-weight: lighter;
+}
+
+.bottom_ing_frame{
+    /*position: relative;*/
+    overflow: auto;
+    /*background-color: #c2bebb;*/
+}
+
+.car_frame{
+    float: left;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.ing_img_frame{
+    position: relative;
+    width: 30vw;
+    height: 25vw;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ing_image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info_frame{
+    float: left;
+    width: 50%;
+    height: 80%;
+    font-family: Roboto, sans-serif;
+    position: relative;
+}
+
+.info_header{
+    font-size: 3vw;
+    font-weight: lighter;
+}
+
+.info_body{
+    font-weight: lighter;
+    font-size: 1vw;
+    line-height: 2em;
+}
+
+.inner_info_div {
+    width: 30vw;
+    height: 25vw;
+    position: relative;
+    margin-left: 15%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    margin-right: auto;
+
+}
+
+.slide-arrow{
+    position: absolute;
+    top: 50%;
+    font-size: 2vw;
+}
+
+.slide-arrow.left{
+    margin-left: 10%;
+}
+
+.slide-arrow.right{
+    /*float: left;*/
+    right: 10%;
+}
