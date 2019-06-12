@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
+import Link from "react-router-dom/es/Link";
 
 const useStyles = makeStyles(theme => ({
     button: {
@@ -15,8 +16,8 @@ export default function SimpleMenu() {
     const classes = useStyles();
     return (
         <div>
-            <Button className={classes.button}>Home</Button>
-            <Button className={classes.button}>Ingredients</Button>
+            <Link to="/" style={{ textDecoration: 'none' }}><Button className={classes.button}>Home</Button></Link>
+            <Link to="/Ingredients" style={{ textDecoration: 'none' }}><Button className={classes.button}>Ingredients</Button></Link>
             <Button className={classes.button}>Customize</Button>
             <Button className={classes.button}>Blog</Button>
             <Button className={classes.button}>Contact</Button>

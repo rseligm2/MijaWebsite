@@ -1,0 +1,54 @@
+.main_ing_frame{
+    font-size: 0;
+    position: relative;
+}
+
+.header_frame{
+    height: 300px;
+    width: 100%;
+    font-family: Roboto, sans-serif;
+    position: relative;
+    vertical-align: center;
+    text-align: center;
+}
+
+.ingpage_header{
+    font-size: 3vw;
+    font-weight: lighter;
+    top: 25%;
+    position: relative;
+}
+
+.ingpage_subheader{
+    font-size: 1.5vw;
+    font-weight: lighter;
+    position: relative;
+    top: 30%;
+}
+
+.box_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box_header{
+    font-size: 1.5vw;
+    width: 70%;
+    font-weight: lighter;
+    position: relative;
+    margin: auto;
+    top: 35%;
+    font-family: Roboto, sans-serif;
+}
+
+.box_text{
+    font-size: 1.15vw;
+    width: 60%;
+    font-weight: lighter;
+    position: relative;
+    margin: auto;
+    line-height: 200%;
+    top: 45%;
+    font-family: Roboto, sans-serif;
+}
