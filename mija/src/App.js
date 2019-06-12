@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from "./components/Home/Home";
 import TopSection from "./components/TopSection/TopSection";
+import BottomSection from "./components/BottomSection/BottomSection";
 
 class App extends Component {
     constructor(props) {
@@ -14,6 +15,7 @@ class App extends Component {
             <div className="main">
                 <TopSection/>
                 <Home/>
+                <BottomSection/>
             </div>
         );
     }

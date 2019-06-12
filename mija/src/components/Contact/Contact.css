@@ -1,6 +1,6 @@
 .contact_frame{
     background-color: #e5fffd;
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 800px;
 }

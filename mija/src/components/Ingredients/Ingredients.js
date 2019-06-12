@@ -8,24 +8,24 @@ import wheat from "../../resources/wheat.jpg";
 const images = [tree, corn, wheat];
 
 const treeinfo = (
-    <Paper className="inner_info_div">
+    <div className="inner_info_div">
         <h1 className="info_header">Tree</h1>
         <p className="info_body">This is a tree.  It is ground up into tiny tree particles and then put inside your shampoo and then it will end up in your hair.</p>
-    </Paper>
+    </div>
 );
 
 const corninfo = (
-    <Paper className="inner_info_div">
+    <div className="inner_info_div">
         <h1 className="info_header">Corn</h1>
         <p className="info_body">This is a corn.  It is ground up into tiny corn particles and then put inside your shampoo and then it will end up in your hair.</p>
-    </Paper>
+    </div>
 );
 
 const wheatinfo = (
-    <Paper className="inner_info_div">
+    <div className="inner_info_div">
         <h1 className="info_header">Wheat</h1>
         <p className="info_body">This is a wheat.  It is ground up into tiny wheat particles and then put inside your shampoo and then it will end up in your hair.</p>
-    </Paper>
+    </div>
 );
 
 const Arrow = ({ clickFunction, glyph, direction }) => (
@@ -66,9 +66,9 @@ export default class Ingredients extends Component {
         return(
             <div className="main_ing_div">
                 <div className="bottom_ing_frame">
-                    <div className="main_header">
-                        <h1 className="ing_title">Ingredients</h1>
-                    </div>
+                    {/*<div className="main_header">*/}
+                        {/*<h1 className="ing_title">Ingredients</h1>*/}
+                    {/*</div>*/}
                     <div className="car_frame">
                         <Arrow
                             clickFunction={ this.prevIndex}
