@@ -3,15 +3,11 @@ import './App.css';
 import Home from "./components/Home/Home";
 import TopSection from "./components/TopSection/TopSection";
 import BottomSection from "./components/BottomSection/BottomSection";
-import Route from "react-router-dom/es/Route";
-import Switch from "react-router-dom/es/Switch";
+import {Route} from "react-router-dom";
+import {Switch} from "react-router-dom";
 import IngredientPage from "./components/IngredientPage/IngredientPage";
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-
-    }
 
     render() {
         return (

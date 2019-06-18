@@ -4,10 +4,6 @@ import aloe from "../../resources/aloe.jpg";
 import ContactInput from "./ContactInput";
 
 export default class Contact extends Component {
-    constructor(props) {
-        super(props);
-
-    }
 
     render() {
         return (

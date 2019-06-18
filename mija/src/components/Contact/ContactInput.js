@@ -2,29 +2,61 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import axios from 'axios';
 
-const useStyles = makeStyles(theme => ({
-    container: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
-    textField: {
-        marginLeft: theme.spacing(1),
-        marginRight: theme.spacing(1),
-        width: 175,
-    },
-    subject: {
-        marginLeft: theme.spacing(1),
-        marginRight: theme.spacing(1),
-        width: 380,
-    },
-}));
+export default function ContactInput(){
 
-export default function ContactInput() {
+    function handleSubmit(e){
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        axios({
+            method: "POST",
+            url:"http://localhost:3000/send",
+            data: {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            }
+        }).then((response)=>{
+            if (response.data.msg === 'success'){
+                alert("Message Sent.");
+                resetForm();
+            }else if(response.data.msg === 'fail'){
+                alert("Message failed to send.")
+            }
+        }).catch(error => {
+            console.log(error.message);
+        })
+    }
+
+    function resetForm(){
+        document.getElementById('contact-form').reset();
+    }
+
+    const useStyles = makeStyles(theme => ({
+        container: {
+            display: 'flex',
+            flexWrap: 'wrap',
+        },
+        textField: {
+            marginLeft: theme.spacing(1),
+            marginRight: theme.spacing(1),
+            width: 175,
+        },
+        subject: {
+            marginLeft: theme.spacing(1),
+            marginRight: theme.spacing(1),
+            width: 380,
+        },
+    }));
     const classes = useStyles();
     return (
-        <div>
-            <form className={classes.container} noValidate autoComplete="off">
+        <form id="contact-form" onSubmit={handleSubmit} noValidate autoComplete="off">
+            <div className={classes.container}>
                 <TextField
                     id="name"
                     label="Name"
@@ -55,9 +87,10 @@ export default function ContactInput() {
                     className={classes.subject}
                     margin="normal"
                 />
-            </form>
+            </div>
             <br/>
-            <Button variant="outlined">Submit</Button>
-        </div>
+            <Button type="submit" variant="outlined">Submit</Button>
+        </form>
     );
+
 }
