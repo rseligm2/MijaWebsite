@@ -14,7 +14,9 @@ app.use(json());
 
 
 const transport = {
-    host: 'smtp.gmail.com',
+    host: 'smtp.mail.us-west-2.awsapps.com',
+    port: 465,
+    secure: true,
     auth: {
         user: creds.USER,
         pass: creds.PASS
@@ -39,7 +41,7 @@ app.post('/send', (req, res, next) => {
     const content = `name: ${name} \n email: ${email} \n message: ${message} `;
 
     const mail = {
-        from: name,
+        from: 'contact@mijaclean.awsapps.com',
         to: 'debigonzalez@comcast.net',  //Change to email address that you want to receive messages on
         subject: subject,
         text: content
@@ -47,6 +49,7 @@ app.post('/send', (req, res, next) => {
 
     transporter.sendMail(mail, (err, data) => {
         if (err) {
+            console.log(err);
             res.json({
                 msg: 'fail'
             })
