@@ -99,31 +99,40 @@ export default class Ingredients extends Component {
         this.nextIndex = this.nextIndex.bind(this);
         this.prevIndex = this.prevIndex.bind(this);
         this.handleFade = this.handleFade.bind(this);
+        this.startTimer = this.startTimer.bind(this);
     }
 
     componentDidMount() {
-        setInterval(
+        this.startTimer();
+    }
+
+    startTimer(){
+        this.timerID = setInterval(
             () => this.nextIndex(),
             8000
         );
     }
 
     nextIndex(){
+        clearInterval(this.timerID);
         const currindex = this.state.index;
         const newindex = currindex + 1 >= images.length ? 0 : currindex + 1;
         this.handleFade();
         setTimeout(function() {
             this.setState({index: newindex});
         }.bind(this), 500);
+        this.startTimer();
     }
 
     prevIndex(){
+        clearInterval(this.timerID);
         const currindex = this.state.index;
         const newindex = currindex - 1 < 0 ? images.length - 1 : currindex - 1;
         this.handleFade();
         setTimeout(function() {
             this.setState({index: newindex});
         }.bind(this), 500);
+        this.startTimer();
     }
 
     handleFade(){
@@ -136,24 +145,20 @@ export default class Ingredients extends Component {
     render() {
         return(
             <div className="main_ing_div">
+                <Arrow
+                    clickFunction={ this.prevIndex}
+                    glyph="&#9664;"
+                    direction="left"/>
                 <div className="bottom_ing_frame">
                     {/*<div className="main_header">*/}
                         {/*<h1 className="ing_title">Ingredients</h1>*/}
                     {/*</div>*/}
                     <div className="car_frame">
-                        <Arrow
-                            clickFunction={ this.prevIndex}
-                            glyph="&#9664;"
-                            direction="left"/>
                         <div className="ing_img_frame">
                             <Fade in={this.state.fade} timeout={{enter: 500, exit: 500}}>
                                 <img src={images[this.state.index]} alt="" className="ing_image"/>
                             </Fade>
                         </div>
-                        <Arrow
-                            clickFunction={ this.nextIndex}
-                            glyph="&#9654;"
-                            direction="right"/>
                     </div>
                     <Fade in={this.state.fade} timeout={{enter: 500, exit: 500}}>
                         <div className="info_frame">
@@ -161,6 +166,10 @@ export default class Ingredients extends Component {
                         </div>
                     </Fade>
                 </div>
+                <Arrow
+                    clickFunction={ this.nextIndex}
+                    glyph="&#9654;"
+                    direction="right"/>
             </div>
         );
     }

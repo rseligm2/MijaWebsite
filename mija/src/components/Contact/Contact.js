@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import './Contact.css';
-import aloe from "../../resources/aloe.jpg";
+import beakers from "../../resources/beakers.jpg";
 import ContactInput from "./ContactInput";
 
 export default class Contact extends Component {
@@ -10,7 +10,7 @@ export default class Contact extends Component {
             <div className="contact_frame">
                 <div className="inner_main_frame">
                     <div className="cont_img_frame">
-                        <img src={aloe} alt = "aloe" className="cont_img"/>
+                        <img src={beakers} alt = "beakers" className="cont_img"/>
                     </div>
                     <div className="input_frame">
                         <div className="inner_input_frame">
