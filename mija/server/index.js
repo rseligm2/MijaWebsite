@@ -7,7 +7,7 @@ const {json} = require('body-parser');
 
 //initialize
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.use(cors());
 app.use(json());
@@ -41,8 +41,8 @@ app.post('/send', (req, res, next) => {
     const content = `name: ${name} \n email: ${email} \n message: ${message} `;
 
     const mail = {
-        from: 'contact@mijaclean.awsapps.com',
-        to: 'debigonzalez@comcast.net',  //Change to email address that you want to receive messages on
+        from: 'contact@mijaclean.com',
+        to: 'debiseligmann@mijaclean.com',  //Change to email address that you want to receive messages on
         subject: subject,
         text: content
     };

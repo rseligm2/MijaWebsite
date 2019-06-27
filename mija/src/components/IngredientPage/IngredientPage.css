@@ -15,7 +15,7 @@
 .ingpage_header{
     font-size: 3vw;
     font-weight: lighter;
-    top: 25%;
+    margin-top: 5%;
     position: relative;
 }
 
@@ -23,7 +23,16 @@
     font-size: 1.5vw;
     font-weight: lighter;
     position: relative;
-    top: 30%;
+    margin-top: 20px;
+}
+
+.ingpage_base_info{
+    font-size: 1.15vw;
+    font-weight: lighter;
+    margin-left: 15%;
+    margin-right: 15%;
+    line-height: 150%;
+    position: relative;
 }
 
 .box_img{
@@ -51,4 +60,46 @@
     line-height: 200%;
     top: 45%;
     font-family: Roboto, sans-serif;
+}
+
+.modal_container{
+    position: static;
+    margin: auto;
+    text-align: center;
+}
+
+.modal_img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.modal_title{
+    font-size: 5vw;
+    font-weight: lighter;
+    font-family: Roboto, sans-serif;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.modal_header{
+    font-size: 1.5vw;
+    font-weight: lighter;
+    font-family: Roboto, sans-serif;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.modal_info{
+    font-size: 1.15vw;
+    font-weight: lighter;
+    font-family: Roboto, sans-serif;
+    margin-left: 15%;
+    margin-right: 15%;
+    line-height: 200%;
+    text-align: center;
 }
