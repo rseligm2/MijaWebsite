@@ -10,6 +10,7 @@ import milk from "../../resources/milk.jpg";
 import rice from "../../resources/rice.jpg";
 import kale from "../../resources/kale.jpg";
 import jojoba from "../../resources/jojoba.png";
+import Fade from '@material-ui/core/Fade';
 
 const images = [tree, corn, wheat, soy, silk, milk, rice, kale, jojoba];
 
@@ -91,23 +92,45 @@ export default class Ingredients extends Component {
         super(props);
 
         this.state = {
-            index: 0
+            index: 0,
+            fade: true,
         };
 
         this.nextIndex = this.nextIndex.bind(this);
         this.prevIndex = this.prevIndex.bind(this);
+        this.handleFade = this.handleFade.bind(this);
+    }
+
+    componentDidMount() {
+        setInterval(
+            () => this.nextIndex(),
+            8000
+        );
     }
 
     nextIndex(){
         const currindex = this.state.index;
         const newindex = currindex + 1 >= images.length ? 0 : currindex + 1;
-        this.setState({index: newindex});
+        this.handleFade();
+        setTimeout(function() {
+            this.setState({index: newindex});
+        }.bind(this), 500);
     }
 
     prevIndex(){
         const currindex = this.state.index;
         const newindex = currindex - 1 < 0 ? images.length - 1 : currindex - 1;
-        this.setState({index: newindex});
+        this.handleFade();
+        setTimeout(function() {
+            this.setState({index: newindex});
+        }.bind(this), 500);
+    }
+
+    handleFade(){
+        this.setState({fade: false});
+        setTimeout(function() {
+            this.setState({fade: true});
+        }.bind(this), 500);
     }
 
     render() {
@@ -122,17 +145,21 @@ export default class Ingredients extends Component {
                             clickFunction={ this.prevIndex}
                             glyph="&#9664;"
                             direction="left"/>
-                        <Paper className="ing_img_frame">
-                            <img src={images[this.state.index]} alt="" className="ing_image"/>
-                        </Paper>
+                        <div className="ing_img_frame">
+                            <Fade in={this.state.fade} timeout={{enter: 500, exit: 500}}>
+                                <img src={images[this.state.index]} alt="" className="ing_image"/>
+                            </Fade>
+                        </div>
                         <Arrow
                             clickFunction={ this.nextIndex}
                             glyph="&#9654;"
                             direction="right"/>
                     </div>
-                    <div className="info_frame">
-                        {info[this.state.index]}
-                    </div>
+                    <Fade in={this.state.fade} timeout={{enter: 500, exit: 500}}>
+                        <div className="info_frame">
+                            {info[this.state.index]}
+                        </div>
+                    </Fade>
                 </div>
             </div>
         );
