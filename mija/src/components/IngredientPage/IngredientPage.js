@@ -44,7 +44,7 @@ const modals = [extracts, proteins, activeing, globalconsc];
 
 export default function IngredientPage() {
     const [dialogOpen, setOpen] = useState(false);
-    const [modalIndex, setIndex] = useState(null);
+    const [modalIndex, setIndex] = useState(1);
     const classes = useStyles();
     function handleClickOpen() {
         setOpen(true);
@@ -75,7 +75,7 @@ export default function IngredientPage() {
                 <p className="ingpage_subheader">sustainable, renewable base formula</p>
                 <p className="ingpage_base_info">Purified Water, Aloe barbadensis (Aloe Vera) Leaf Juice, Cocoglucoside, Sodium Cocoyl Apple Amino Acids, Sodium CocoylIsethionate, Sodium Cocoyl Hydrolyzed Soy Protein, Propanediol, Panthenol, Glycerin, Simmondsia chinensis (Jojoba) Esters, Xanthan Gum, Sclerotium Gum, Cetyl Alcohol, Phenoxyethanol, Caprylyl Glycol, Citric Acid, Trisodium Ethylenediamine Disuccinate, Sorbic Acid, Lactic Acid</p>
             </div>
-            <Dialog open={dialogOpen} onClose={handleClickClose} maxWidth='md' fullWidth='true'>
+            <Dialog open={dialogOpen} onClose={handleClickClose} maxWidth='md' fullWidth={true}>
                 {modals[modalIndex]}
             </Dialog>
             <Grid container className={classes.root} spacinng={0}>
