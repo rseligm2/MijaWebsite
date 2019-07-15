@@ -1,5 +1,5 @@
 .contact_frame{
-    background-color: #e5fffd;
+    background-color: #FCFCF4;
     position: relative;
     width: 100%;
     height: 800px;
@@ -7,7 +7,7 @@
 
 .inner_main_frame{
     width: 85%;
-    height: 80%;
+    height: 70%;
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
@@ -19,6 +19,7 @@
     height: 100%;
     margin-right: auto;
     position: absolute;
+    bottom: 0;
 }
 
 .cont_img{
@@ -42,7 +43,7 @@
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20%;
+    /*margin-top: 20%;*/
     margin-bottom: auto;
     font-family: Roboto, sans-serif;
     text-align: left;
@@ -51,6 +52,7 @@
 .cont_header{
     font-size: 3vw;
     font-weight: lighter;
+    color: #3667C2;
 }
 
 .input_field{

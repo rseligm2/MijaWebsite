@@ -41,11 +41,13 @@ export default function ContactInput(){
         container: {
             display: 'flex',
             flexWrap: 'wrap',
+            color: "#292A5F",
         },
         textField: {
             marginLeft: theme.spacing(1),
             marginRight: theme.spacing(1),
             width: 175,
+            color: "#292A5F",
         },
         subject: {
             marginLeft: theme.spacing(1),

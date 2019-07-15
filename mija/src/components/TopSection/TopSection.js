@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../resources/mijo_cropped.jpg';
+import logo from '../../resources/cropped_Mija_Full_Logo.jpg';
 import './TopSection.css';
 import TopMenu from "../TopMenu/TopMenu";
 

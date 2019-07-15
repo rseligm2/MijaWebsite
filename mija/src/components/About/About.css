@@ -1,0 +1,67 @@
+.main_ab_frame{
+    position: relative;
+    height: 50vw;
+    /*display: inline-block;*/
+}
+
+.left_frame{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.text_frame{
+    text-align: left;
+    width: 70%;
+    margin-left: auto;
+    margin-right: 10%;
+    font-family: Roboto, sans-serif;
+}
+
+.ab_header{
+    color: #3667C2;
+    font-size: 3vw;
+}
+
+.ab_sub_header{
+    font-size: 1.5vw;
+    color: #292A5F;
+}
+
+.ab_info{
+    color: #292A5F;
+    font-size: 1.25vw;
+}
+
+.right_frame{
+    position: absolute;
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
+    width: 50%;
+    height: 100%;
+    right: 0;
+    margin-left: auto;
+}
+
+.ab_img_frame{
+    width: 70%;
+    height: 90%;
+    background-color: #292A5F;
+    bottom: 0;
+    position: absolute;
+    left: 5%;
+}
+
+.about_img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -5%;
+    top: -4%;
+    /*margin-top: auto;*/
+    /*margin-bottom: auto;*/
+    object-fit: cover;
+}

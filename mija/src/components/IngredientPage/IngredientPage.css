@@ -10,6 +10,7 @@
     position: relative;
     vertical-align: center;
     text-align: center;
+    color: #292A5F;
 }
 
 .ingpage_header{
@@ -49,6 +50,7 @@
     margin: auto;
     top: 35%;
     font-family: Roboto, sans-serif;
+    color: white;
 }
 
 .box_text{
@@ -60,6 +62,7 @@
     line-height: 200%;
     top: 45%;
     font-family: Roboto, sans-serif;
+    color: white;
 }
 
 .modal_container{

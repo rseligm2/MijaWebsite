@@ -24,9 +24,9 @@ const useStyles = makeStyles(theme => ({
         verticalAlign: 'center',
         position: 'relative',
         transition: '.3s',
-        backgroundColor: '#ededed',
+        backgroundColor: '#292A5F',
         '&:hover':{
-            backgroundColor: '#cccac9',
+            backgroundColor: '#5454bd',
             transition: '.3s',
         },
         cursor: 'pointer',
