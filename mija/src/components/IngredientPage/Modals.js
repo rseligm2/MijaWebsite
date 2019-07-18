@@ -3,9 +3,11 @@ import tree from "../../resources/tree.jpg";
 import cloverflowers from "../../resources/cloverflowers.jpg";
 import waves from "../../resources/waves.jpg";
 import React from "react";
+import Button from '@material-ui/core/Button';
 import "./IngredientPage.css";
 
 export const extracts = <div className="modal_container">
+    <Button className = "exit_button" onClick={this.props.closeFunction}>X</Button>
     <img src={flowers} alt="circle_img" className="modal_img"/>
     <h1 className="modal_title">Extracts</h1>
     <h3 className="modal_header">Plant-based extracts</h3>
