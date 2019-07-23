@@ -3,15 +3,19 @@
     width: 100%;
     position: relative;
     height: auto;
-    background-color: #CAD3E6;
+    background-color: white;
 }
 
 .main_header{
     width: 100%;
-    height: 15%;
-    position: absolute;
+    height: 15vw;
+    position: relative;
     margin-top: 0;
     font-family: Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #CAD3E6;
     /*border-bottom-style: solid;*/
     /*border-color: rgba(222,220,219,.5);*/
 }
@@ -19,6 +23,7 @@
 .ing_title{
     font-size: 3vw;
     font-weight: lighter;
+    position: relative;
 }
 
 .bottom_ing_frame{
@@ -45,7 +50,7 @@
     margin-bottom: 15%;
     margin-left: auto;
     margin-right: 7%;
-    background-color: #CAD3E6;
+    background-color: white;
 }
 
 .ing_image{

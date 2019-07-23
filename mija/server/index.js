@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 // const axios = require('axios');
-const creds = require('../config');
+const creds = require('./config');
 const nodemailer = require('nodemailer');
 const {json} = require('body-parser');
 

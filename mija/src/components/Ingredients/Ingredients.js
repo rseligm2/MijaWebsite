@@ -145,6 +145,7 @@ export default class Ingredients extends Component {
     render() {
         return(
             <div className="main_ing_div">
+                <div className="main_header"><h1 className="ing_title">BIODEGRADABLE, SUSTAINABLE INGREDIENTS</h1></div>
                 <Arrow
                     clickFunction={ this.prevIndex}
                     glyph="&#9664;"
