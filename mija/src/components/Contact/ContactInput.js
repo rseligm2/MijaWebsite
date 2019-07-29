@@ -14,7 +14,7 @@ export default function ContactInput(){
         const message = document.getElementById('message').value;
         axios({
             method: "POST",
-            url:"http://localhost:3001/send",
+            url:"http://mijaclean.com/api/send",
             data: {
                 name: name,
                 email: email,
