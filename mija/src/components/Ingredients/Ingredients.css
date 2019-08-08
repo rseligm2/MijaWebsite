@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
     background-color: #CAD3E6;
+    color: #292A5F;
     /*border-bottom-style: solid;*/
     /*border-color: rgba(222,220,219,.5);*/
 }
@@ -70,12 +71,14 @@
 .info_header{
     font-size: 3vw;
     font-weight: lighter;
+    color: #292A5F;
 }
 
 .info_body{
     font-weight: lighter;
     font-size: 1.8vw;
     line-height: 2em;
+    color: #292A5F;
 }
 
 .inner_info_div {

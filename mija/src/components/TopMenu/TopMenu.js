@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
     button: {
-        margin: theme.spacing(1),
+        margin: theme.spacing(2),
         color: "#292A5F",
 
 },

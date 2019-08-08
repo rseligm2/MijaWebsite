@@ -16,64 +16,64 @@ const images = [tree, corn, wheat, soy, silk, milk, rice, kale, jojoba];
 
 const treeinfo = (
     <div className="inner_info_div">
-        <h1 className="info_header">Baobab</h1>
-        <p className="info_body">From the seeds the upside down tree of Africa, the unique combination of hair loving amino acids, it offers exceptional damage recover, conditioning and nourishment for you hair.</p>
+        <h1 className="info_header">Super conditioning</h1>
+        <p className="info_body">Baobab is one of the strongest natural hair-repair proteins.  This powerful mix of hair-loving amino acids offers exceptional conditioning, and nourishment for your hair.</p>
     </div>
 );
 
 const corninfo = (
     <div className="inner_info_div">
-        <h1 className="info_header">Phytokeratin</h1>
-        <p className="info_body">Features hydrolyzed proteins from wheat, corn and soybeans to mimic human hair amino acids.  Enhances moisture and conditioning to increase strength and elasticity.</p>
+        <h1 className="info_header">Enhanced moisture</h1>
+        <p className="info_body">Phytokeratin combines hydrolyzed proteins from wheat, corn, and soybeans that penetrate the hair shaft and helps your hair retain its natural moisture content.</p>
     </div>
 );
 
 const wheatinfo = (
     <div className="inner_info_div">
-        <h1 className="info_header">Wheat</h1>
-        <p className="info_body">High in cystine, it works to give hair better body and control, increases shine and provides protective qualities.</p>
+        <h1 className="info_header">Healthy life cycle</h1>
+        <p className="info_body">Wheat, rich in cysteine, works to give your hair better body and control, maintaining your hair's healthy life cycle. It increases shine, protects your hair, and repairs damage.</p>
     </div>
 );
 
 const soyinfo = (
     <div className="inner_info_div">
-        <h1 className="info_header">Soy</h1>
-        <p className="info_body">Enhances hair manageability, improves body and texture of hair and improves combing properties.</p>
+        <h1 className="info_header">Smoother and fuller</h1>
+        <p className="info_body">Soy is rich in cysteine, an amino acid used to strengthen hair.  It also enhances hair manageability, improves body and texture of hair and improves combing properties.</p>
     </div>
 );
 
 const silkinfo = (
     <div className="inner_info_div">
-        <h1 className="info_header">Silk</h1>
-        <p className="info_body">Provides a protective barrier that adds luster, body and manageability.</p>
+        <h1 className="info_header">Replenishing</h1>
+        <p className="info_body">Silk restores your damaged hair and shields it from damaging elements. It can also add volume and shine while keeping your hair moisturized, soft and free of tangles.</p>
     </div>
 );
 
 const milkinfo = (
     <div className="inner_info_div">
-        <h1 className="info_header">Milk</h1>
-        <p className="info_body">One of the most nutrient rich proteins due to its complete amino acid content, it improves elasticity of hair, easier combing and strength to prevent breakage.</p>
+        <h1 className="info_header">Strong and shiny</h1>
+        <p className="info_body">Milk protein is rich in amino acids.  It strengthens your hair and improves elasticity, so you can easily comb your hair without breakage. Its great nourishment for your hair.</p>
     </div>
 );
 
 const riceinfo = (
     <div className="inner_info_div">
-        <h1 className="info_header">Rice</h1>
-        <p className="info_body">Shown to increase total hair volume by up to 32%, it also adds shine and enhances natural highlights.</p>
+        <h1 className="info_header">Natural highlights</h1>
+        <p className="info_body">Rice can increase your total hair volume by up to 32%. It will also enhance your natural highlights for blond to medium brown hair. Your hair will look shinier and healthier.</p>
     </div>
 );
 
 const kaleinfo = (
     <div className="inner_info_div">
-        <h1 className="info_header">Kale Blend</h1>
-        <p className="info_body">The combination of Kale, Carrot and Lemon proteins is packed with vitamins and antioxidants for added softness, shine while increasing volume.</p>
+        <h1 className="info_header">Healthy scalp and hair</h1>
+        <p className="info_body">The combination of kale, carrot and lemon proteins is packed with vitamins and antioxidants for softness and shine.  It keeps your scalp healthy while adding volume.</p>
     </div>
 );
 
 const jojobainfo = (
     <div className="inner_info_div">
-        <h1 className="info_header">Jojoba</h1>
-        <p className="info_body">Highly effective to repair and condition damaged hair.  Ideal for adding shine and luster.</p>
+        <h1 className="info_header">Relief for damaged hair</h1>
+        <p className="info_body">Jojoba is highly effective in repair and conditioning of damaged hair. It adds shine and luster to your hair and is uniquely similar to natural hair oils.</p>
     </div>
 );
 
@@ -145,11 +145,11 @@ export default class Ingredients extends Component {
     render() {
         return(
             <div className="main_ing_div">
-                <div className="main_header"><h1 className="ing_title">BIODEGRADABLE, SUSTAINABLE INGREDIENTS</h1></div>
-                <Arrow
-                    clickFunction={ this.prevIndex}
-                    glyph="&#9664;"
-                    direction="left"/>
+                <div className="main_header"><h1 className="ing_title">biodegradeable, sustainable ingredients</h1></div>
+                {/*<Arrow*/}
+                    {/*clickFunction={ this.prevIndex}*/}
+                    {/*glyph="&#9664;"*/}
+                    {/*direction="left"/>*/}
                 <div className="bottom_ing_frame">
                     {/*<div className="main_header">*/}
                         {/*<h1 className="ing_title">Ingredients</h1>*/}
@@ -167,10 +167,10 @@ export default class Ingredients extends Component {
                         </div>
                     </Fade>
                 </div>
-                <Arrow
-                    clickFunction={ this.nextIndex}
-                    glyph="&#9654;"
-                    direction="right"/>
+                {/*<Arrow*/}
+                    {/*clickFunction={ this.nextIndex}*/}
+                    {/*glyph="&#9654;"*/}
+                    {/*direction="right"/>*/}
             </div>
         );
     }

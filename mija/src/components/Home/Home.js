@@ -14,17 +14,19 @@ export default class Home extends Component {
                 <div className="image_div">
                     <div className="text_div">
                         <div className="inner_text_div">
-                            <h2 id="header">NATURAL, CUSTOM SHAMPOO</h2>
+                            <h2 id="header">NATURAL, PERSONALIZED HAIR CARE</h2>
                             <p id="intro_text">
-                                Starts with our handcrafted shampoo base
+                                Nourish, replenish and rejuvenate
                             </p>
-                            <p className="info">Carefully formulated to comply with the Whole Foods Premium Body Care Standards.  That means not only is it sulfate-free, its sourced from 100% plant-based, renewable ingredients.  Its free of toxins such as parabens, formaldehyde and petroleum products.  To keep the formula as gentle and as biogradable as possible, its completely fragrance-free and silicone-free.  We also only use extremely mild globally-approved preservatives.</p>
-                            <p className="info">Choose from all natural extracts, hydrolyzed proteins and specialty additives to formulate a shampoo specifically for your hair.  Or keep it simple and don't add anything.  Its completely up to YOU.</p>
+                            <p className="info">It starts with our carefully formulated shampoo base sourced from 100% plant-based, renewable and biodegradable ingredients.  Sulfate-free and fragrance-free, its gentle enough for color-treated hair, keratin-treated hair and Brazilian blowouts.</p>
+                            <p className="info">No parabens, no formaldehyde, no silicones, no petroleum-based ingredients.</p>
+                            <p className="info">A few answers to brief questions narrows down over 30 natural extracts, hydrolyzed proteins and plant-based targeted active ingredients to create a formula designed precisely for your hair.</p>
+                            <p className="info">Redefine your hair care routine today.  Create your own Mija personalized, all natural shampoo.</p>
                             <br/>
                             <br/>
-                            <Button variant="outlined" size="small">
-                                <p className="button_label">Customize Now!</p>
-                            </Button>
+                            {/*<Button variant="outlined" size="small">*/}
+                                {/*<p className="button_label">Customize Now!</p>*/}
+                            {/*</Button>*/}
                         </div>
                     </div>
                     <img src={aloebeaker} alt="aloe" className="image"/>

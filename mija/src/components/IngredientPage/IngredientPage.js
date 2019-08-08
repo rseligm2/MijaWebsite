@@ -87,8 +87,8 @@ export default function IngredientPage() {
                     </Grid>
                     <Grid item xs={3}>
                         <Paper className={classes.paper} onClick={clickExtracts}>
-                            <h1 className="box_header">EXTRACTS</h1>
-                            <p className="box_text">from nature</p>
+                            <h1 className="box_header">NATURAL EXTRACTS</h1>
+                            <p className="box_text">Extracts from nature that are kinder to your hair.</p>
                         </Paper>
                     </Grid>
                     <Grid item xs={3}>
@@ -99,7 +99,7 @@ export default function IngredientPage() {
                     <Grid item xs={3}>
                         <Paper className={classes.paper} onClick={clickProteins}>
                             <h1 className="box_header">HYDROLYZED PROTEINS</h1>
-                            <p className="box_text">enhancing your hair with amino acids</p>
+                            <p className="box_text">Nourishing your hair with essential amino acids.</p>
                         </Paper>
                     </Grid>
                 </Grid>
@@ -107,7 +107,7 @@ export default function IngredientPage() {
                     <Grid item xs={3}>
                         <Paper className={classes.paper} onClick={clickActive}>
                             <h1 className="box_header">TARGETED ACTIVE INGREDIENTS</h1>
-                            <p className="box_text">nature with a boost</p>
+                            <p className="box_text">Nature’s best with a boost!</p>
                         </Paper>
                     </Grid>
                     <Grid item xs={3}>
