@@ -9,9 +9,9 @@ export default function BottomSection() {
         <div className="bottom_main">
             <div className="social_frame">
                 <div className="inner_social">
-                    <img src={facebook} alt="facebook" className="icon"/>
-                    <img src={instagram} alt="instagram" className="icon"/>
-                    <img src={twitter} alt="twitter" className="icon"/>
+                    <a href="https://www.facebook.com/mijaclean/"><img src={facebook} alt="facebook" className="icon"/></a>
+                    <a href="https://www.instagram.com/mijacleanllc/"><img src={instagram} alt="instagram" className="icon"/></a>
+                    <a href="https://twitter.com/LlcMija"><img src={twitter} alt="twitter" className="icon"/></a>
                 </div>
             </div>
             <div className="footer">

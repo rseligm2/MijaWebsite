@@ -42,11 +42,14 @@ export default function ContactInput(){
             display: 'flex',
             flexWrap: 'wrap',
             color: "#292A5F",
+            lineHeight: '5',
         },
         textField: {
             marginLeft: theme.spacing(1),
             marginRight: theme.spacing(1),
-            width: 175,
+            fontSize: '1.8vw',
+            lineHeight:'1vw',
+            width: '10vw',
             color: "#292A5F",
         },
         subject: {
@@ -54,6 +57,9 @@ export default function ContactInput(){
             marginRight: theme.spacing(1),
             width: 380,
         },
+        button: {
+            width: '20vw',
+        }
     }));
     const classes = useStyles();
     return (
@@ -62,6 +68,7 @@ export default function ContactInput(){
                 <TextField
                     id="name"
                     label="Name"
+                    margin="dense"
                     placeholder="Name"
                     className={classes.textField}
                     margin="normal"
@@ -69,6 +76,7 @@ export default function ContactInput(){
                 <TextField
                     id="email"
                     label="Email"
+                    margin="dense"
                     placeholder="Email"
                     className={classes.textField}
                     margin="normal"
@@ -76,6 +84,7 @@ export default function ContactInput(){
                 <TextField
                     id="subject"
                     label="Subject"
+                    margin="dense"
                     placeholder="Subject"
                     className={classes.subject}
                     margin="normal"
@@ -83,6 +92,7 @@ export default function ContactInput(){
                 <TextField
                     id="message"
                     label="Message"
+                    margin="dense"
                     multiline
                     rows="6"
                     placeholder="Enter message here"
@@ -91,7 +101,7 @@ export default function ContactInput(){
                 />
             </div>
             <br/>
-            <Button type="submit" variant="outlined">Submit</Button>
+            <Button type="submit" className={classes.button} variant="outlined">Submit</Button>
         </form>
     );
 
