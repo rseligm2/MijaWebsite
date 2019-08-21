@@ -8,6 +8,7 @@ import {Switch} from "react-router-dom";
 import IngredientPage from "./components/IngredientPage/IngredientPage";
 import Customize from "./components/Customize/Customize";
 import About from "./components/About/About";
+import Blog from "./components/Blog/Blog";
 
 class App extends Component {
 
@@ -20,6 +21,7 @@ class App extends Component {
                     <Route path="/Ingredients" component={IngredientPage}/>
                     <Route path="/Customize" component={Customize}/>
                     <Route path="/About" component={About}/>
+                    <Route path="/Blog" component={Blog}/>
                 </Switch>
                 <Route component={BottomSection}/>
             </div>

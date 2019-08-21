@@ -61,8 +61,6 @@ app.post('/api/send', (req, res, next) => {
     })
 });
 
-app.get('/test', (req, res) => res.send('Hello World!'));
-
 app.listen(port, ()=> {
         console.log('Server is listening');
     }

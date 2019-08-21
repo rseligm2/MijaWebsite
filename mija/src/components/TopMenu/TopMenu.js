@@ -21,9 +21,9 @@ export default function SimpleMenu() {
             <Link to="/" style={{ textDecoration: 'none' }}><Button className={classes.button}>Home</Button></Link>
             <Link to="/Ingredients" style={{ textDecoration: 'none' }}><Button className={classes.button}>Ingredients</Button></Link>
             {/*<Button className={classes.button}>Customize</Button>*/}
-            {/*<Button className={classes.button}>Blog</Button>*/}
             {/*<Button className={classes.button}>Contact</Button>*/}
             <Link to="/About" style={{ textDecoration: 'none' }}><Button className={classes.button}>About</Button></Link>
+            <Link to="/Blog" style={{ textDecoration: 'none' }}><Button className={classes.button}>Blog</Button></Link>
             </div>
     );
 }
