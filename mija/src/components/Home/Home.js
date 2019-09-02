@@ -71,7 +71,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <Ingredients/>
+            <Ingredients isMobile={isMobile} />
             <Contact/>
         </div>
     );
