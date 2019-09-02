@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
-import "./Ingredients.css";
+// import "./Ingredients.css";
 import tree from "../../resources/tree.jpg";
 import corn from "../../resources/corn.jpg";
 import wheat from "../../resources/wheat.jpg";

@@ -72,7 +72,7 @@ export default function Home() {
                 </div>
             </div>
             <Ingredients isMobile={isMobile} />
-            <Contact/>
+            <Contact isMobile={isMobile} />
         </div>
     );
 };
