@@ -9,8 +9,10 @@ import coconut from '../../resources/coconut.jpg';
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
+        margin: theme.spacing(3),
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
+            margin: 0,
         },
     },
     textFrame: {
