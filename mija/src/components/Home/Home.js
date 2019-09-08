@@ -16,16 +16,19 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
     },
     imageDiv: {
-        margin: 'auto',
+        position: 'relative',
         width: '100%',
-        background: `url(${aloebeaker})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'bottom',
-        backgroundSize: 'cover',
+    },
+    imageAloe: {
+        width: '100%',
     },
     textDiv: {
+        position: 'absolute',
+        height: '100%',
+        right: 0,
         marginLeft: 'auto',
         backgroundColor: 'rgba(255, 255, 255, .5)',
+        overflow: 'auto',
         [theme.breakpoints.up('sm')]: {
             width: '50%',
         },
@@ -61,7 +64,7 @@ export default function Home() {
             <div className={classes.imageDiv}>
                 <div className={classes.textDiv}>
                     <div className={classes.innerTextDiv}>
-                        <Typography variant={isMobile ? "h4" : "h2"} className={classes.header}>NATURAL, PERSONALIZED HAIR CARE</Typography>
+                        <Typography variant={isMobile ? "h4" : "h3"} className={classes.header}>NATURAL, PERSONALIZED HAIR CARE</Typography>
                         <Typography variant="h5" className={classes.introText}>Nourish, replenish and rejuvenate</Typography>
 
                         <Typography variant="body1" className={classes.info}>It starts with our carefully formulated shampoo base sourced from 100% plant-based, renewable and biodegradable ingredients.  Sulfate-free and fragrance-free, its gentle enough for color-treated hair, keratin-treated hair and Brazilian blowouts.</Typography>
@@ -70,6 +73,7 @@ export default function Home() {
                         <Typography variant="body1" className={classes.info}>Redefine your hair care routine today.  Create your own Mija personalized, all natural shampoo.</Typography>
                     </div>
                 </div>
+                <img src={aloebeaker} alt="aloe" className={classes.imageAloe} />
             </div>
             <Ingredients isMobile={isMobile} />
             <Contact isMobile={isMobile} />
