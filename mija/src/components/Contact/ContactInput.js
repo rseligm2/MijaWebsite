@@ -9,12 +9,12 @@ import axios from 'axios';
 
 const useStyles = makeStyles(theme => ({
     marginRight: {
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             marginRight: theme.spacing(1),
         },
     },
     marginLeft: {
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             marginLeft: theme.spacing(1),
         },
     },
@@ -106,7 +106,7 @@ export default function ContactInput() {
                     />
                 </Grid>
                 <br/>
-                <Grid xs={12}>
+                <Grid item xs={12}>
                     <Button type="submit" className={classes.button} variant="outlined">Submit</Button>
                 </Grid>
             </Grid>

@@ -11,9 +11,14 @@ const useStyles = makeStyles(theme => ({
     root: {
         backgroundColor: '#fcfcf4',
         display: 'flex',
-        flex: '1 1 0',
-        [theme.breakpoints.down('sm')]: {
-            flexDirection: 'column',
+        flexDirection: 'column',
+        [theme.breakpoints.up('md')]: {
+            flexDirection: 'row',
+        },
+    },
+    imgContainer: {
+        [theme.breakpoints.up('md')]: {
+            width: '50%',
         },
     },
     contImg: {
@@ -21,7 +26,11 @@ const useStyles = makeStyles(theme => ({
         objectFit: 'cover',
     },
     inputFrame: {
-        padding: theme.spacing(4),
+        padding: theme.spacing(2),
+        [theme.breakpoints.up('md')]: {
+            width: '50%',
+            padding: theme.spacing(4),
+        },
     },
     contHeader: {
         fontWeight: 'lighter',
@@ -35,7 +44,9 @@ export default function Contact(props) {
 
     return (
         <div className={classes.root}>
-            <img src={beakers} alt="beakers" className={classes.contImg} />
+            <div className={classes.imgContainer}>
+                <img src={beakers} alt="beakers" className={classes.contImg} />
+            </div>
             <div className={classes.inputFrame}>
                 <Typography
                     variant={isMobile ? "h4" : "h3"}
