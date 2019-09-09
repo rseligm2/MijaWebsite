@@ -1,12 +1,31 @@
 import React from 'react';
+
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+
 import axios from 'axios';
 
-export default function ContactInput(){
+const useStyles = makeStyles(theme => ({
+    marginRight: {
+        [theme.breakpoints.up('md')]: {
+            marginRight: theme.spacing(1),
+        },
+    },
+    marginLeft: {
+        [theme.breakpoints.up('md')]: {
+            marginLeft: theme.spacing(1),
+        },
+    },
+    button: {
+        minWidth: '20vw',
+    }
+}));
 
-    function handleSubmit(e){
+export default function ContactInput() {
+
+    function handleSubmit(e) {
         e.preventDefault();
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
@@ -33,76 +52,64 @@ export default function ContactInput(){
         })
     }
 
-    function resetForm(){
+    function resetForm() {
         document.getElementById('contact-form').reset();
     }
 
-    const useStyles = makeStyles(theme => ({
-        container: {
-            display: 'flex',
-            flexWrap: 'wrap',
-            color: "#292A5F",
-            lineHeight: '5',
-        },
-        textField: {
-            marginLeft: theme.spacing(1),
-            marginRight: theme.spacing(1),
-            fontSize: '1.8vw',
-            lineHeight:'1vw',
-            width: '10vw',
-            color: "#292A5F",
-        },
-        subject: {
-            marginLeft: theme.spacing(1),
-            marginRight: theme.spacing(1),
-            width: 380,
-        },
-        button: {
-            width: '20vw',
-        }
-    }));
     const classes = useStyles();
+
     return (
         <form id="contact-form" onSubmit={handleSubmit} noValidate autoComplete="off">
-            <div className={classes.container}>
-                <TextField
-                    id="name"
-                    label="Name"
-                    margin="dense"
-                    placeholder="Name"
-                    className={classes.textField}
-                    margin="normal"
-                />
-                <TextField
-                    id="email"
-                    label="Email"
-                    margin="dense"
-                    placeholder="Email"
-                    className={classes.textField}
-                    margin="normal"
-                />
-                <TextField
-                    id="subject"
-                    label="Subject"
-                    margin="dense"
-                    placeholder="Subject"
-                    className={classes.subject}
-                    margin="normal"
-                />
-                <TextField
-                    id="message"
-                    label="Message"
-                    margin="dense"
-                    multiline
-                    rows="6"
-                    placeholder="Enter message here"
-                    className={classes.subject}
-                    margin="normal"
-                />
-            </div>
-            <br/>
-            <Button type="submit" className={classes.button} variant="outlined">Submit</Button>
+            <Grid container>
+                <Grid item xs={12} md={6}>
+                    <TextField
+                        id="name"
+                        label="Name"
+                        placeholder="Name"
+                        className={classes.marginRight}
+                        margin="normal"
+                        variant="outlined"
+                        fullWidth
+                    />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <TextField
+                        id="email"
+                        label="Email"
+                        placeholder="Email"
+                        className={classes.marginLeft}
+                        margin="normal"
+                        variant="outlined"
+                        fullWidth
+                    />
+                </Grid>
+                <Grid item xs={12}>
+                    <TextField
+                        id="subject"
+                        label="Subject"
+                        placeholder="Subject"
+                        margin="normal"
+                        variant="outlined"
+                        fullWidth
+                    />
+                </Grid>
+                <Grid item xs={12}>
+                    <TextField
+                        id="message"
+                        label="Message"
+                        multiline
+                        rows="6"
+                        placeholder="Enter message here"
+                        margin="normal"
+                        variant="outlined"
+                        fullWidth
+                    />
+                </Grid>
+                <br/>
+                <Grid item xs={12}>
+                    <Button type="submit" className={classes.button} variant="outlined">Submit</Button>
+                </Grid>
+            </Grid>
         </form>
     );
-
 }

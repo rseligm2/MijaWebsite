@@ -1,39 +1,82 @@
-import React, { Component } from 'react';
+import React from 'react';
+
+import { makeStyles } from '@material-ui/core/styles'; 
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Typography from '@material-ui/core/Typography';
+
 import aloebeaker from '../../resources/aloe_in_beaker.jpg';
-import './Home.css';
-import Button from '@material-ui/core/Button';
+
 import Ingredients from "../Ingredients/Ingredients";
 import Contact from "../Contact/Contact";
 
 
-export default class Home extends Component {
+const useStyles = makeStyles(theme => ({
+    root: {
+        margin: 'auto',
+        width: '100%',
+    },
+    imageDiv: {
+        position: 'relative',
+        width: '100%',
+    },
+    imageAloe: {
+        width: '100%',
+    },
+    textDiv: {
+        position: 'absolute',
+        height: '100%',
+        right: 0,
+        marginLeft: 'auto',
+        backgroundColor: 'rgba(255, 255, 255, .5)',
+        overflow: 'auto',
+        [theme.breakpoints.up('sm')]: {
+            width: '50%',
+        },
+    },
+    innerTextDiv: {
+        width: '70%',
+        marginLeft: '15%',
+        marginRight: 'auto',
+        textAlign: 'left',
+        fontFamily: 'Roboto, sans-serif',
+        padding: theme.spacing(3, 0),
+    },
+    header: {
+        color: '#3667C2',
+    },
+    introText: {
+        fontWeight: 'lighter',
+        color: '#292A5F',
+    },
+    info: {
+        margin: theme.spacing(2, 0),
+        fontWeight: 'lighter',
+        color: '#292A5F',
+    },
+}));
 
-    render() {
-        return(
-            <div className="main_div">
-                <div className="image_div">
-                    <div className="text_div">
-                        <div className="inner_text_div">
-                            <h2 id="header">NATURAL, PERSONALIZED HAIR CARE</h2>
-                            <p id="intro_text">
-                                Nourish, replenish and rejuvenate
-                            </p>
-                            <p className="info">It starts with our carefully formulated shampoo base sourced from 100% plant-based, renewable and biodegradable ingredients.  Sulfate-free and fragrance-free, its gentle enough for color-treated hair, keratin-treated hair and Brazilian blowouts.</p>
-                            <p className="info">No parabens, no formaldehyde, no silicones, no petroleum-based ingredients.</p>
-                            <p className="info">A few answers to brief questions narrows down over 30 natural extracts, hydrolyzed proteins and plant-based targeted active ingredients to create a formula designed precisely for your hair.</p>
-                            <p className="info">Redefine your hair care routine today.  Create your own Mija personalized, all natural shampoo.</p>
-                            <br/>
-                            <br/>
-                            {/*<Button variant="outlined" size="small">*/}
-                                {/*<p className="button_label">Customize Now!</p>*/}
-                            {/*</Button>*/}
-                        </div>
+export default function Home() {
+    const classes = useStyles();
+    const isMobile = useMediaQuery('(max-width:600px)');
+
+    return (
+        <div className={classes.root}>
+            <div className={classes.imageDiv}>
+                <div className={classes.textDiv}>
+                    <div className={classes.innerTextDiv}>
+                        <Typography variant={isMobile ? "h4" : "h3"} className={classes.header}>NATURAL, PERSONALIZED HAIR CARE</Typography>
+                        <Typography variant="h5" className={classes.introText}>Nourish, replenish and rejuvenate</Typography>
+
+                        <Typography variant="body1" className={classes.info}>It starts with our carefully formulated shampoo base sourced from 100% plant-based, renewable and biodegradable ingredients.  Sulfate-free and fragrance-free, its gentle enough for color-treated hair, keratin-treated hair and Brazilian blowouts.</Typography>
+                        <Typography variant="body1" className={classes.info}>No parabens, no formaldehyde, no silicones, no petroleum-based ingredients.</Typography>
+                        <Typography variant="body1" className={classes.info}>A few answers to brief questions narrows down over 30 natural extracts, hydrolyzed proteins and plant-based targeted active ingredients to create a formula designed precisely for your hair.</Typography>
+                        <Typography variant="body1" className={classes.info}>Redefine your hair care routine today.  Create your own Mija personalized, all natural shampoo.</Typography>
                     </div>
-                    <img src={aloebeaker} alt="aloe" className="image"/>
                 </div>
-                <Ingredients/>
-                <Contact/>
+                <img src={aloebeaker} alt="aloe" className={classes.imageAloe} />
             </div>
-        );
-    }
-}
+            <Ingredients isMobile={isMobile} />
+            <Contact isMobile={isMobile} />
+        </div>
+    );
+};

@@ -1,25 +1,65 @@
-import React, {Component} from "react";
-import './Contact.css';
+import React from "react";
+import PropTypes from "prop-types";
+
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+
 import beakers from "../../resources/beakers.jpg";
 import ContactInput from "./ContactInput";
 
-export default class Contact extends Component {
+const useStyles = makeStyles(theme => ({
+    root: {
+        backgroundColor: '#fcfcf4',
+        display: 'flex',
+        flexDirection: 'column',
+        [theme.breakpoints.up('md')]: {
+            flexDirection: 'row',
+        },
+    },
+    imgContainer: {
+        [theme.breakpoints.up('md')]: {
+            width: '50%',
+        },
+    },
+    contImg: {
+        width: '100%',
+        objectFit: 'cover',
+    },
+    inputFrame: {
+        padding: theme.spacing(2),
+        [theme.breakpoints.up('md')]: {
+            width: '50%',
+            padding: theme.spacing(4),
+        },
+    },
+    contHeader: {
+        fontWeight: 'lighter',
+        color: '#3667C2',
+    },
+}));
 
-    render() {
-        return (
-            <div className="contact_frame">
-                <div className="inner_main_frame">
-                    <div className="cont_img_frame">
-                        <img src={beakers} alt = "beakers" className="cont_img"/>
-                    </div>
-                    <div className="input_frame">
-                        <div className="inner_input_frame">
-                            <h1 className="cont_header">CONTACT US</h1>
-                            <ContactInput/>
-                        </div>
-                    </div>
-                </div>
+export default function Contact(props) {
+    const classes = useStyles();
+    const { isMobile } = props;
+
+    return (
+        <div className={classes.root}>
+            <div className={classes.imgContainer}>
+                <img src={beakers} alt="beakers" className={classes.contImg} />
             </div>
-        );
-    }
+            <div className={classes.inputFrame}>
+                <Typography
+                    variant={isMobile ? "h4" : "h3"}
+                    className={classes.contHeader}
+                >
+                    CONTACT US
+                </Typography>
+                <ContactInput />
+            </div>
+        </div>
+    );
 }
+
+Contact.propTypes = {
+    isMobile: PropTypes.bool.isRequired,
+};
