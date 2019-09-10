@@ -17,7 +17,9 @@ const useStyles = makeStyles(theme => ({
     },
     imageDiv: {
         position: 'relative',
-        width: '100%',
+        // width: '100%',
+        display: 'flex',
+        flexDirection:'column',
     },
     imageAloe: {
         width: '100%',
@@ -25,13 +27,13 @@ const useStyles = makeStyles(theme => ({
     textDiv: {
         display: 'flex',
         alignItems: 'center',
-        position: 'absolute',
         height: '100%',
         right: 0,
         marginLeft: 'auto',
         backgroundColor: 'rgba(255, 255, 255, .5)',
         overflow: 'auto',
         [theme.breakpoints.up('sm')]: {
+            position: 'absolute',
             width: '50%',
         },
     },
