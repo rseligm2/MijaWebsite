@@ -23,6 +23,8 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
     },
     textDiv: {
+        display: 'flex',
+        alignItems: 'center',
         position: 'absolute',
         height: '100%',
         right: 0,
