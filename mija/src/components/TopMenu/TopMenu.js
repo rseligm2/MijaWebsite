@@ -22,6 +22,7 @@ export default function SimpleMenu() {
     const links = [
         { to: "/", label: "Home" },
         { to: "/Ingredients", label: "Ingredients" },
+        { href: "https://www.surveymonkey.com/r/MijaCleanOrder", label: "Order Now" },
         { to: "/About", label: "About" },
         { to: "/Blog", label: "Blog" },
         // { to: "/Customize", label: "Customize" },
@@ -30,14 +31,17 @@ export default function SimpleMenu() {
 
     return (
         <div className={classes.root}>
-            {links.map(link => (
+            {links.map(({ to, href, label }, i) => (
                 <Button
-                    key={link.to}
+                    key={i}
                     className={classes.button}
-                    component={Link}
-                    to={link.to}
+                    component={to ? Link : 'a'}
+                    to={to}
+                    href={href}
+                    target={href && '_blank'}
+                    rel={href && 'noreferrer noopener'}
                 >
-                    {link.label}
+                    {label}
                 </Button>
             ))}
         </div>
