@@ -3,6 +3,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles'; 
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 import aloebeaker from '../../resources/aloe_in_beaker.jpg';
 
@@ -75,6 +76,17 @@ export default function Home() {
                         <Typography variant="body1" className={classes.info}>No parabens, no formaldehyde, no silicones, no petroleum-based ingredients.</Typography>
                         <Typography variant="body1" className={classes.info}>A few answers to brief questions narrows down over 30 natural extracts, hydrolyzed proteins and plant-based targeted active ingredients to create a formula designed precisely for your hair.</Typography>
                         <Typography variant="body1" className={classes.info}>Redefine your hair care routine today.  Create your own Mija personalized, all natural shampoo.</Typography>
+                        <Button
+                            variant="outlined"
+                            color="primary"
+                            size="large"
+                            component="a"
+                            href="https://www.surveymonkey.com/r/MijaCleanOrder"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
+                            Order Now
+                        </Button>
                     </div>
                 </div>
                 <img src={aloebeaker} alt="aloe" className={classes.imageAloe} />
