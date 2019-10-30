@@ -52,6 +52,7 @@ const useStyles = makeStyles(theme => ({
     introText: {
         fontWeight: 'lighter',
         color: '#292A5F',
+        marginTop: theme.spacing(2),
     },
     info: {
         margin: theme.spacing(2, 0),
@@ -75,7 +76,7 @@ export default function Home() {
                         <Typography variant="body1" className={classes.info}>It starts with our carefully formulated shampoo base sourced from 100% plant-based, renewable and biodegradable ingredients.  Sulfate-free and fragrance-free, its gentle enough for color-treated hair, keratin-treated hair and Brazilian blowouts.</Typography>
                         <Typography variant="body1" className={classes.info}>No parabens, no formaldehyde, no silicones, no petroleum-based ingredients.</Typography>
                         <Typography variant="body1" className={classes.info}>A few answers to brief questions narrows down over 30 natural extracts, hydrolyzed proteins and plant-based targeted active ingredients to create a formula designed precisely for your hair.</Typography>
-                        <Typography variant="body1" className={classes.info}>Redefine your hair care routine today.  Create your own Mija personalized, all natural shampoo.</Typography>
+                        <Typography variant="body1" className={classes.info}>Redefine your hair care route today. Create your own Mija (Women's) OR Mijo (Men's) personalized, all natural shampoo. 8.5 ox. - <i>$45.00</i></Typography>
                         <Button
                             variant="outlined"
                             color="primary"

@@ -7,7 +7,8 @@ const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
         justifyContent: 'space-between',
-        maxWidth: 400,
+        width: 600,
+        maxWidth: '100%',
         margin: 'auto',
     },
     button: {
