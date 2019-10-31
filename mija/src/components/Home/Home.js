@@ -76,7 +76,7 @@ export default function Home() {
                         <Typography variant="body1" className={classes.info}>It starts with our carefully formulated shampoo base sourced from 100% plant-based, renewable and biodegradable ingredients.  Sulfate-free and fragrance-free, its gentle enough for color-treated hair, keratin-treated hair and Brazilian blowouts.</Typography>
                         <Typography variant="body1" className={classes.info}>No parabens, no formaldehyde, no silicones, no petroleum-based ingredients.</Typography>
                         <Typography variant="body1" className={classes.info}>A few answers to brief questions narrows down over 30 natural extracts, hydrolyzed proteins and plant-based targeted active ingredients to create a formula designed precisely for your hair.</Typography>
-                        <Typography variant="body1" className={classes.info}>Redefine your hair care route today. Create your own Mija (Women's) or Mijo (Men's) personalized, all natural shampoo. 8.5 ox. - <i>$45.00</i></Typography>
+                        <Typography variant="body1" className={classes.info}>Redefine your hair care route today. Create your own Mija (Women's) or Mijo (Men's) personalized, all natural shampoo. 8.5 oz. - <i>$45.00</i></Typography>
                         <Button
                             variant="outlined"
                             color="primary"
