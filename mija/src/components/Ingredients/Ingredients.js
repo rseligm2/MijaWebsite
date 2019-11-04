@@ -140,6 +140,7 @@ export default function Ingredients(props) {
     useEffect(() => {
         startTimer();
         return () => clearInterval(timerID.current);
+        /* eslint-disable-next-line */
     }, []);
 
     const startTimer = () => {
