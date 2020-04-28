@@ -61,10 +61,10 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-ReactGA.event({
-    category: 'User',
-    action: 'Created an Account'
-});
+// ReactGA.event({
+//     category: 'User',
+//     action: 'Created an Account'
+// });
 
 export default function Home() {
     const classes = useStyles();
