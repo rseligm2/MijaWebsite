@@ -23,7 +23,7 @@ export default function SimpleMenu() {
     const links = [
         { to: "/", label: "Home" },
         { to: "/Ingredients", label: "Ingredients" },
-        { href: "https://www.surveymonkey.com/r/MijaCleanOrder", label: "Order Now" },
+        { href: "https://store35683037.company.site/", label: "Order Now" },
         { to: "/About", label: "About" },
         { to: "/Blog", label: "Blog" },
         // { to: "/Customize", label: "Customize" },
